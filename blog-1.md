@@ -10,18 +10,26 @@ In this blog, we'll dive into:
 Let's get started!
 
 ---
+
 ## What Are Union Types?
 
 A **union type** allows a variable to hold one of multiple types. Imagine you want a variable that could either be a `string` or a `number`—union types make this possible. This feature is especially useful when a variable might take different forms depending on context.
-
-
 ## What Are Intersection Types?
 
 An **intersection type** combines multiple types into one, meaning a variable must meet the requirements of all included types. This is useful when you want an object to have properties from several types.
 
+### Example: Basic Union Type
+
 ### Example: Basic Intersection Type
 
 ```typescript
+let userId: string | number;
+
+userId = "user123"; // valid
+userId = 456;       // valid
+// userId = true;   // Error: Type 'boolean' is not assignable to type 'string | number'
+
+
 interface HasName {
   name: string;
 }
@@ -36,15 +44,3 @@ const person: Person = {
   name: "John",
   age: 30
 };
-
-
-### Example: Basic Union Type
-
-```typescript
-let userId: string | number;
-
-userId = "user123"; // valid
-userId = 456;       // valid
-// userId = true;   // Error: Type 'boolean' is not assignable to type 'string | number'
-
-
