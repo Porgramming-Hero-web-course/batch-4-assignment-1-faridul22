@@ -10,6 +10,10 @@ In this blog, we'll dive into:
 Let's get started!
 
 ---
+## What Are Union Types?
+
+A **union type** allows a variable to hold one of multiple types. Imagine you want a variable that could either be a `string` or a `number`—union types make this possible. This feature is especially useful when a variable might take different forms depending on context.
+
 
 ## What Are Intersection Types?
 
@@ -33,10 +37,6 @@ const person: Person = {
   age: 30
 };
 
-
-## What Are Union Types?
-
-A **union type** allows a variable to hold one of multiple types. Imagine you want a variable that could either be a `string` or a `number`—union types make this possible. This feature is especially useful when a variable might take different forms depending on context.
 
 ### Example: Basic Union Type
 
