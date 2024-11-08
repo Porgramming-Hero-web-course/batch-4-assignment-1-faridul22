@@ -23,3 +23,27 @@ let userId: string | number;
 userId = "user123"; // valid
 userId = 456;       // valid
 // userId = true;   // Error: Type 'boolean' is not assignable to type 'string | number'
+
+
+
+## What Are Intersection Types?
+
+An **intersection type** combines multiple types into one, meaning a variable must meet the requirements of all included types. This is useful when you want an object to have properties from several types.
+
+### Example: Basic Intersection Type
+
+```typescript
+interface HasName {
+  name: string;
+}
+
+interface HasAge {
+  age: number;
+}
+
+type Person = HasName & HasAge;
+
+const person: Person = {
+  name: "John",
+  age: 30
+};
